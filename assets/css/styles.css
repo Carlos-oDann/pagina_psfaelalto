@@ -38,7 +38,6 @@ body {
     min-height: 100vh;
 }
 
-/* Títulos */
 h1,
 h2,
 h3 {
@@ -47,7 +46,10 @@ h3 {
 }
 
 h1,
-h2,
+h2 {
+    color: var(--cafe-oscuro);
+}
+
 h3 {
     color: var(--cafe-oscuro);
 }
@@ -120,7 +122,7 @@ main {
 }
 
 /* =========================================
-   4. HEADER (Navegación)
+   4. HEADER (Navegación) - CORREGIDO
    ========================================= */
 header {
     background: var(--blanco);
@@ -134,30 +136,50 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    min-height: 70px;
+    /* Usamos min-height para que crezca si hace falta */
+    padding: 10px 20px;
 }
 
 .logo {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    /* Ajustado para que no sea enorme */
     font-weight: bold;
     color: var(--cafe-oscuro);
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    text-decoration: none;
+    flex-shrink: 0;
+    /* Evita que el logo se aplaste */
+}
+
+/* Control estricto de la imagen del logo */
+.logo img,
+.logo-img {
+    height: 50px;
+    /* Altura fija para mantener el header alineado */
+    width: auto;
+    object-fit: contain;
 }
 
 .menu-lista {
     display: flex;
     gap: 20px;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .menu-item {
     font-weight: 600;
     color: var(--cafe-oscuro);
-    padding: 25px 0;
+    padding: 10px 0;
     position: relative;
     cursor: pointer;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    /* Evita que el texto del menú se parta en dos líneas */
 }
 
 .menu-item:hover {
@@ -173,8 +195,9 @@ header {
     background: var(--blanco);
     min-width: 220px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 4px 4px;
+    border-radius: 4px;
     flex-direction: column;
+    padding: 5px 0;
 }
 
 li:hover .submenu {
@@ -183,9 +206,10 @@ li:hover .submenu {
 
 .submenu a {
     padding: 12px 20px;
-    border-bottom: 1px solid #f5f5f5;
-    font-size: 0.95rem;
+    border-bottom: 1px solid #f9f9f9;
+    font-size: 0.9rem;
     color: #555;
+    display: block;
 }
 
 .submenu a:hover {
@@ -201,6 +225,7 @@ li:hover .submenu {
     font-weight: bold;
     font-size: 0.9rem;
     box-shadow: 0 2px 5px rgba(198, 40, 40, 0.3);
+    white-space: nowrap;
 }
 
 .btn-mision-nav:hover {
@@ -411,9 +436,8 @@ footer {
 }
 
 /* =========================================
-   8. PÁGINA MISIONES - ESTILOS BASE
+   8. PÁGINA MISIONES
    ========================================= */
-/* Hero Misión */
 .hero-mision {
     position: relative;
     height: 70vh;
@@ -516,7 +540,7 @@ footer {
     height: auto;
 }
 
-/* Timeline (Itinerario) */
+/* Timeline */
 .timeline-section {
     background-color: #FFFDE7;
     border-radius: 20px;
@@ -557,7 +581,7 @@ footer {
 }
 
 .timeline-row:nth-child(even) {
-    text-align: right;
+    text-align: left;
 }
 
 .timeline-img-box {
@@ -580,6 +604,29 @@ footer {
     border-radius: 50%;
     border: 5px solid white;
     box-shadow: var(--sombra-fuerte);
+}
+
+/* Lista Zonas */
+.lista-zonas {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.lista-zonas li {
+    font-size: 1.1rem;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--sombra-suave);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lista-zonas i {
+    color: var(--mision-rojo);
+    font-size: 1.2rem;
 }
 
 /* CTA WhatsApp */
@@ -749,39 +796,30 @@ footer {
 /* =========================================
    10. MEJORA VISUAL DE IMÁGENES (Vibrancia)
    ========================================= */
-/* Aplicamos estilos solo a las fotos de ambiente para darles uniformidad */
 .hero-bg-img,
 .rounded-img,
 .circle-img,
 .carousel-slide img,
 .card img {
-    /* Ajuste de Objeto */
     object-fit: cover;
-
-    /* Filtro de "Vibrancia" para uniformidad */
     filter: contrast(1.1) saturate(1.15) sepia(0.1);
     transition: all 0.5s ease;
 }
 
-/* Efecto al pasar el mouse: Iluminación y Zoom */
 .hero-bg-img:hover,
 .rounded-img:hover,
 .circle-img:hover,
 .carousel-slide img:hover,
 .card img:hover {
     filter: contrast(1) saturate(1) sepia(0);
-    /* Vuelve a natural */
     transform: scale(1.03);
-    /* Zoom sutil */
 }
 
 /* =========================================
-   13. ESTILOS GRID DE ZONAS (UBICACIÓN INTERACTIVA)
-   (Añadido para soportar la nueva sección de Mapa)
+   11. GRID ZONAS (NUEVO)
    ========================================= */
 .grid-zonas {
     display: grid;
-    /* Crea columnas automáticas de mínimo 280px */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
 }
@@ -797,26 +835,20 @@ footer {
     transition: all 0.3s ease;
     border: 1px solid transparent;
     text-decoration: none;
-    /* Quita subrayado */
     position: relative;
     overflow: hidden;
 }
 
-/* Efecto Hover */
 .zona-card:hover {
     transform: translateY(-5px);
-    /* Sube un poco */
     box-shadow: var(--sombra-fuerte);
     border-color: var(--mision-rojo);
-    /* Borde rojo sutil */
 }
 
-/* El Icono (Círculo) */
 .zona-icon {
     width: 60px;
     height: 60px;
     background-color: #FFEBEE;
-    /* Rojo muy suave */
     color: var(--mision-rojo);
     border-radius: 50%;
     display: flex;
@@ -832,7 +864,6 @@ footer {
     color: white;
 }
 
-/* Información Texto */
 .zona-info h3 {
     margin: 0 0 5px 0;
     font-size: 1.1rem;
@@ -854,7 +885,6 @@ footer {
     font-weight: bold;
 }
 
-/* Estilo diferente para Capillas (Destacado) */
 .zona-card.destacado .zona-icon {
     background-color: #FFF8E1;
     color: var(--mision-dorado);
@@ -874,22 +904,39 @@ footer {
 }
 
 /* =========================================
-   11. RESPONSIVE (Móvil)
+   12. RESPONSIVE (CORREGIDO PARA DESBORDE)
    ========================================= */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+
+    /* Header en móvil */
     .barra-nav {
         flex-direction: column;
         height: auto;
         padding: 15px;
+        gap: 15px;
     }
 
     .menu-lista {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        margin-top: 10px;
+        flex-direction: column;
+        /* Apilar menú verticalmente */
+        width: 100%;
+        gap: 0;
+        /* Quitar espacios horizontales */
     }
 
+    .menu-item {
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 1px solid #f0f0f0;
+        /* Línea divisoria suave */
+    }
+
+    .logo {
+        margin-bottom: 5px;
+    }
+
+    /* Grid de dos columnas pasa a una */
     .grid-2-cols {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -908,7 +955,7 @@ footer {
         font-size: 2rem;
     }
 
-    /* Timeline Vertical */
+    /* Timeline Vertical en Móvil */
     .timeline-container::before {
         left: 20px;
     }

@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (construirFooter) construirFooter();
 
 });
+
 /* =====================================================
    MAIN.JS - Lógica Interactiva del Sitio
    ===================================================== */

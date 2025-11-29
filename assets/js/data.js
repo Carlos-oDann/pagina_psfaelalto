@@ -4,13 +4,14 @@
 window.Parroquia = window.Parroquia || {};
 
 window.Parroquia.config = {
-    // ¡EL INTERRUPTOR MÁGICO! 
-    // Cambia a 'false' para ver el diseño café (Normal)
-    // Cambia a 'true' para ver el diseño rojo (Misiones/Diciembre)
+    // El interruptor de la temporada
     esTemporadaMisiones: true,
 
     nombre: "Parroquia San Francisco de Asís",
-    parroco: "P. Javier"
+    parroco: "P. Javier",
+
+    // AGREGAMOS ESTO: La ruta de tu logo
+    logo: "assets/img/logo_parroquia.png"
 };
 
 // ==========================================
