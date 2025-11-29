@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sacramentos - Parroquia San Francisco de Asís</title>
+
+    <!-- Fuentes y Estilos -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Salimos de 'pages' para buscar el CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+
+    <!-- HEADER INYECTADO -->
+    <div id="inyector-header"></div>
+
+    <main class="container seccion">
+
+        <!-- Título -->
+        <h1 class="titulo-seccion">Vida Sacramental</h1>
+        <p class="subtitulo-seccion">Guía práctica para recibir la Gracia de Dios</p>
+
+        <!-- GRID DE SACRAMENTOS -->
+        <div class="grid-tarjetas">
+
+            <!-- 1. BAUTISMO -->
+            <div class="tarjeta" id="bautismo">
+                <div class="tarjeta-cuerpo">
+                    <i class="fa-solid fa-water icono-tarjeta"></i>
+                    <h3>Bautismo</h3>
+                    <p>La puerta de entrada a la vida cristiana.</p>
+                    <div style="margin-top: 15px; font-size: 0.9rem; color: #555;">
+                        <p><strong>Celebraciones:</strong> Sábados 10:00 am</p>
+                        <hr style="margin: 10px 0; border: 0; border-top: 1px solid #eee;">
+                        <p><strong>Requisitos:</strong></p>
+                        <ul style="list-style: disc; margin-left: 15px;">
+                            <li>Certificado de Nacimiento (Copia)</li>
+                            <li>Carnet de Padres y Padrinos</li>
+                            <li>Asistencia al Cursillo Pre-bautismal</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. PRIMERA COMUNIÓN -->
+            <div class="tarjeta" id="comunion">
+                <div class="tarjeta-cuerpo">
+                    <i class="fa-solid fa-book-bible icono-tarjeta"></i>
+                    <h3>Primera Comunión</h3>
+                    <p>Recibir a Jesús Eucaristía por primera vez.</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">
+                        La catequesis familiar tiene una duración de 2 años. Inicia cuando el niño/a cumple 8 años.
+                    </p>
+                    <a href="grupos.html"
+                        style="display: block; margin-top: 15px; color: var(--cafe-primario); font-weight: bold; font-size: 0.9rem;">
+                        Ver horarios de Catequesis &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- 3. CONFIRMACIÓN (DESTACADO PARA JÓVENES) -->
+            <!-- Usamos un borde dorado superior para resaltarlo visualmente -->
+            <div class="tarjeta" id="confirmacion"
+                style="border-top-color: var(--mision-dorado); background-color: #FFFDE7;">
+                <div class="tarjeta-cuerpo">
+                    <i class="fa-solid fa-fire icono-tarjeta" style="color: var(--mision-rojo);"></i>
+                    <h3 style="color: var(--mision-rojo);">Confirmación</h3>
+                    <p style="font-weight: bold; color: #555;">¡El Sacramento de la madurez cristiana!</p>
+
+                    <div style="margin-top: 15px; font-size: 0.9rem;">
+                        <p>Para jóvenes desde los 15 años. Es aquí donde te preparas para ser un verdadero testigo de
+                            Cristo y unirte a nuestras <strong>Misiones Navideñas</strong>.</p>
+                        <div style="margin-top: 15px; text-align: center;">
+                            <span
+                                style="background-color: var(--mision-rojo); color: white; padding: 5px 10px; border-radius: 4px; font-size: 0.8rem;">INSCRIPCIONES
+                                ABIERTAS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. MATRIMONIO -->
+            <div class="tarjeta" id="matrimonio">
+                <div class="tarjeta-cuerpo">
+                    <i class="fa-solid fa-rings-wedding icono-tarjeta"></i>
+                    <h3>Matrimonio</h3>
+                    <p>El amor bendecido por Dios ante la comunidad.</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">
+                        Se debe reservar la fecha con al menos <strong>6 meses de anticipación</strong> en el Despacho
+                        Parroquial para realizar el expediente matrimonial.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 5. UNCIÓN DE LOS ENFERMOS -->
+            <div class="tarjeta">
+                <div class="tarjeta-cuerpo">
+                    <i class="fa-solid fa-hand-holding-medical icono-tarjeta"></i>
+                    <h3>Unción de los Enfermos</h3>
+                    <p>Consuelo y fortaleza para nuestros hermanos enfermos o ancianos.</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">
+                        Puede solicitarse en cualquier momento en caso de emergencia llamando al teléfono de urgencias.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER INYECTADO -->
+    <div id="inyector-footer"></div>
+
+    <!-- SCRIPT (Importante: ruta relativa ../) -->
+    <!-- SCRIPTS (Orden Importante) -->
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Parroquia San Francisco de Asís</title>
+
+    <!-- Fuentes y Estilos -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Salimos de 'pages' para buscar el CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+
+    <!-- HEADER INYECTADO -->
+    <div id="inyector-header"></div>
+
+    <main class="container seccion">
+
+        <h1 class="titulo-seccion">Contáctanos</h1>
+        <p class="subtitulo-seccion">Si tienes alguna pregunta o necesitas información, no dudes en contactarnos.</p>
+
+        <!-- GRID DE 2 COLUMNAS: INFO Y FORMULARIO -->
+        <div
+            style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:50px; margin-top:30px;">
+
+            <!-- COLUMNA 1: INFORMACIÓN -->
+            <div>
+                <div class="tarjeta" style="border-top: none; box-shadow: none;">
+                    <h3 style="color: var(--cafe-primario); font-size: 1.5rem; margin-bottom: 20px;">Oficina Parroquial
+                    </h3>
+                    <p style="margin-bottom: 20px;">Visítanos para anotar intenciones de misa, solicitar certificados de
+                        bautismo o coordinar una cita con el párroco.</p>
+
+                    <div style="font-size:1.1rem; display:flex; flex-direction:column; gap:20px;">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <i class="fa-solid fa-location-dot"
+                                style="color:var(--cafe-primario); font-size: 1.5rem; width: 30px; text-align: center;"></i>
+                            <span>Plaza 25 de Julio, El Alto - Senkata</span>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <i class="fa-solid fa-phone"
+                                style="color:var(--cafe-primario); font-size: 1.5rem; width: 30px; text-align: center;"></i>
+                            <span>(591) 77282946</span>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <i class="fa-solid fa-envelope"
+                                style="color:var(--cafe-primario); font-size: 1.5rem; width: 30px; text-align: center;"></i>
+                            <span>psfa.elalto@gmail.com</span>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <i class="fa-regular fa-clock"
+                                style="color:var(--cafe-primario); font-size: 1.5rem; width: 30px; text-align: center;"></i>
+                            <span>Lun-Mie-Jue-Vie: 09:00 - 12:00 / 15:00 - 18:00</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <i class="fa-regular fa-clock"
+                                style="color:var(--cafe-primario); font-size: 1.5rem; width: 30px; text-align: center;"></i>
+                            <span>Sab: 09:00 - 12:00 / 15:00 - 18:00</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <i class="fa-regular fa-clock"
+                                style="color:var(--cafe-primario); font-size: 1.5rem; width: 30px; text-align: center;"></i>
+                            <span>Martes y domingos cerrado</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MAPA SIMULADO -->
+                <div
+                    style="height: 300px; margin-top: 30px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 4px solid white;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d945.9499260289939!2d-68.18265389410209!3d-16.58258059385234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915ed8dc4e16ec75%3A0xcffc58efcdd93876!2sParroquia%20%22San%20Francisco%20de%20Asis%22!5e1!3m2!1ses-419!2sbo!4v1764424390827!5m2!1ses-419!2sbo"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <!-- Botón opcional para abrir en la App -->
+                <div style="text-align: center; margin-top: 15px;">
+                    <a href="https://maps.app.goo.gl/ZTgsgWiLpxb18GEZ8" target="_blank"
+                        style="color: var(--cafe-primario); font-size: 0.9rem; font-weight: bold; text-decoration: underline;">
+                        <i class="fa-solid fa-location-arrow"></i> Abrir en Google Maps
+                    </a>
+                </div>
+            </div>
+
+            <!-- COLUMNA 2: FORMULARIO 
+            <form
+                style="display:flex; flex-direction:column; gap:20px; background:white; padding:40px; border-radius:8px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); height:fit-content;">
+                <h3 style="margin-bottom:10px; color: var(--cafe-oscuro);">Envíanos un mensaje</h3>
+
+                <div>
+                    <label style="font-size: 0.9rem; font-weight: bold; color: #666;">Nombre Completo</label>
+                    <input type="text" placeholder="Ej: Juan Pérez"
+                        style="width: 100%; padding:12px; border:1px solid #ccc; border-radius:4px; font-family:inherit; margin-top: 5px;">
+                </div>
+
+                <div>
+                    <label style="font-size: 0.9rem; font-weight: bold; color: #666;">Correo Electrónico</label>
+                    <input type="email" placeholder="Ej: juan@email.com"
+                        style="width: 100%; padding:12px; border:1px solid #ccc; border-radius:4px; font-family:inherit; margin-top: 5px;">
+                </div>
+
+                <div>
+                    <label style="font-size: 0.9rem; font-weight: bold; color: #666;">Asunto</label>
+                    <select
+                        style="width: 100%; padding:12px; border:1px solid #ccc; border-radius:4px; font-family:inherit; background:white; margin-top: 5px;">
+                        <option value="">Selecciona una opción...</option>
+                        <option value="intencion">Intención de Misa</option>
+                        <option value="certificado">Certificado de Bautismo/Confirmación</option>
+                        <option value="donacion">Información sobre Donaciones</option>
+                        <option value="pastoral">Unirme a un Grupo Pastoral</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label style="font-size: 0.9rem; font-weight: bold; color: #666;">Mensaje</label>
+                    <textarea rows="5" placeholder="Escribe aquí tu consulta..."
+                        style="width: 100%; padding:12px; border:1px solid #ccc; border-radius:4px; font-family:inherit; margin-top: 5px;"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-cafe" style="justify-content:center; margin-top: 10px;">ENVIAR
+                    MENSAJE</button>
+            </form>
+            -->
+        </div>
+    </main>
+
+    <!-- FOOTER INYECTADO -->
+    <div id="inyector-footer"></div>
+
+    <!-- SCRIPTS (Orden Importante) -->
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

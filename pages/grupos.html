@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupos y Apostolados - Parroquia San Francisco de Asís</title>
+
+    <!-- Fuentes y Estilos -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Salimos de 'pages' para buscar el CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+
+    <!-- HEADER INYECTADO -->
+    <div id="inyector-header"></div>
+
+    <main class="container seccion">
+
+        <h1 class="titulo-seccion">Grupos y Apostolados</h1>
+        <p class="subtitulo-seccion">"Hay diversidad de carismas, pero un mismo Espíritu"</p>
+
+        <div class="grid-tarjetas">
+
+            <!-- 1. COMUNICACIONES (DESTACADO) -->
+            <!-- Usamos un ID para poder enlazar directamente aquí desde el menú -->
+            <div class="tarjeta" id="comunicaciones"
+                style="border-top-color: var(--mision-rojo); background-color: #FAFAFA;">
+                <div class="tarjeta-cuerpo">
+                    <i class="fa-solid fa-camera icono-tarjeta" style="color: var(--mision-rojo);"></i>
+                    <h3 style="color: var(--mision-rojo);">Equipo de Comunicaciones</h3>
+                    <p><strong>¿Te gusta la fotografía, el video o las redes sociales?</strong></p>
+                    <p style="margin-top: 10px;">
+                        Nuestra misión es evangelizar el "continente digital". Transmitimos las misas, cubrimos eventos
+                        y gestionamos las redes de la parroquia.
+                    </p>
+                    <div style="margin-top: 15px; font-size: 0.9rem; border-top: 1px solid #eee; padding-top: 10px;">
+                        <p><i class="fa-solid fa-calendar-check"></i> Reuniones: Sábados 16:00 hrs</p>
+                        <p><i class="fa-solid fa-laptop-code"></i> Enseñamos diseño y edición</p>
+                    </div>
+                    <a href="contacto.html"
+                        style="display: block; margin-top: 15px; color: var(--mision-rojo); font-weight: bold; text-align: right;">
+                        ¡Quiero unirme! &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2. CATEQUISTAS -->
+            <div class="tarjeta">
+                <div class="tarjeta-cuerpo">
+                    <i class="fa-solid fa-chalkboard-user icono-tarjeta"></i>
+                    <h3>Catequistas</h3>
+                    <p>Hombres y mujeres dedicados a transmitir la fe a las nuevas generaciones. Si tienes vocación de
+                        enseñanza, este es tu lugar.</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">
+                        Formación permanente: Jueves 19:30 hrs.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 3. CORO PARROQUIAL -->
+            <div class="tarjeta">
+                <div class="tarjeta-cuerpo">
+                    <i class="fa-solid fa-music icono-tarjeta"></i>
+                    <h3>Coro Parroquial</h3>
+                    <p>"El que canta, ora dos veces". Animamos las liturgias dominicales y las grandes fiestas.</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">
+                        Ensayos: Sábados 15:00 hrs.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 4. CÁRITAS -->
+            <div class="tarjeta">
+                <div class="tarjeta-cuerpo">
+                    <i class="fa-solid fa-hand-holding-dollar icono-tarjeta"></i>
+                    <h3>Cáritas / Pastoral Social</h3>
+                    <p>El brazo solidario de la Iglesia. Atendemos el comedor de ancianos y gestionamos el ropero
+                        comunitario.</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">
+                        Recepción de donaciones: Martes y Jueves.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 5. MONAGUILLOS -->
+            <div class="tarjeta">
+                <div class="tarjeta-cuerpo">
+                    <i class="fa-solid fa-bell icono-tarjeta"></i>
+                    <h3>Monaguillos</h3>
+                    <p>Niños y adolescentes que sirven en el altar ayudando al sacerdote en la Eucaristía.</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">
+                        Para niños desde la Primera Comunión.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 6. LITURGIA -->
+            <div class="tarjeta">
+                <div class="tarjeta-cuerpo">
+                    <i class="fa-solid fa-book-open icono-tarjeta"></i>
+                    <h3>Equipo de Liturgia</h3>
+                    <p>Encargados de preparar las celebraciones: lectores, monitores y arreglo del templo.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER INYECTADO -->
+    <div id="inyector-footer"></div>
+
+    <!-- SCRIPT -->
+    <!-- SCRIPTS (Orden Importante) -->
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Parroquia - San Francisco de Asís</title>
+
+    <!-- Fuentes y Estilos -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Salimos de 'pages' para buscar el CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+
+    <!-- HEADER INYECTADO -->
+    <div id="inyector-header"></div>
+
+    <main class="container seccion">
+
+        <!-- Título Principal -->
+        <h1 class="titulo-seccion">Información Parroquial</h1>
+        <p class="subtitulo-seccion">Horarios, servicios y nuestra guía espiritual</p>
+
+        <!-- GRID DE INFORMACIÓN (Tarjetas) -->
+        <div class="grid-tarjetas">
+
+            <!-- Tarjeta 1: Horarios -->
+            <div class="tarjeta">
+                <div class="tarjeta-cuerpo">
+                    <i class="fa-regular fa-clock icono-tarjeta"></i>
+                    <h3>Horarios de Misa</h3>
+                    <ul style="margin-left:20px; margin-top:15px; list-style:disc; color:#555; line-height: 1.8;">
+                        <li><strong>Lunes a Sábado:</strong> 19:00 hrs</li>
+                        <li><strong>Domingo:</strong> 08:00, 10:30 (Niños), 19:00 hrs</li>
+                        <li><strong>Adoración:</strong> Jueves 18:00 hrs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2: Confesiones -->
+            <div class="tarjeta">
+                <div class="tarjeta-cuerpo">
+                    <i class="fa-solid fa-hands-praying icono-tarjeta"></i>
+                    <h3>Confesiones</h3>
+                    <p>El sacramento de la reconciliación es un encuentro con la misericordia del Padre.</p>
+                    <div
+                        style="background-color: var(--crema-fondo); padding: 10px; border-radius: 4px; margin-top: 10px; font-weight: bold; text-align: center;">
+                        Jueves Eucarísticos<br>17:00 a 19:00 hrs
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3: Sacerdotes (Con ID para enlace directo) -->
+            <div class="tarjeta" id="sacerdotes">
+                <div class="tarjeta-cuerpo">
+                    <i class="fa-solid fa-user-tie icono-tarjeta"></i>
+                    <h3>Nuestros Sacerdotes</h3>
+                    <div style="margin-top: 15px;">
+                        <p style="margin-bottom: 5px;"><strong>Párroco:</strong><br> P. Carlos María</p>
+                        <p><strong>Vicario:</strong><br> P. Juan José</p>
+                    </div>
+                    <p style="margin-top:15px; font-size:0.85rem; color:#666; font-style: italic;">Disponibles para
+                        dirección espiritual previa cita en despacho.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN HISTORIA (Separada visualmente) -->
+        <div id="historia" class="seccion" style="margin-top: 40px; border-top: 1px solid #eee;">
+            <h2 class="titulo-seccion">Nuestra Historia</h2>
+
+            <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap; margin-top: 30px;">
+                <!-- Imagen Placeholder -->
+                <div
+                    style="flex: 1; min-width: 300px; height: 300px; background: #ccc url('https://placehold.co/600x600/8D6E63/FFF?text=Templo+Antiguo') center/cover; border-radius: 8px; box-shadow: var(--sombra);">
+                </div>
+
+                <!-- Texto Historia -->
+                <div style="flex: 1; min-width: 300px;">
+                    <h3 style="color: var(--cafe-primario); margin-bottom: 15px;">Un faro de fe desde 1980</h3>
+                    <p style="margin-bottom: 15px;">
+                        La Parroquia San Francisco de Asís nació del deseo de los vecinos de tener un lugar de encuentro
+                        con
+                        Dios. Comenzó como una pequeña capilla de adobe construida con el esfuerzo de las primeras
+                        familias del barrio.
+                    </p>
+                    <p>
+                        Con el paso de los años y la guía de nuestros pastores, la comunidad ha crecido hasta
+                        convertirse en lo que es hoy: una familia de familias, con 3 capillas dependientes y más de 15
+                        grupos pastorales activos.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN CAPILLAS -->
+        <div id="capillas" class="seccion">
+            <h2 class="titulo-seccion">Nuestras Capillas</h2>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
+                <div
+                    style="background: white; padding: 20px; border-radius: 8px; text-align: center; border: 1px solid #eee;">
+                    <h3 style="color: var(--cafe-primario);">Capilla San José</h3>
+                    <p>Zona Norte</p>
+                    <p style="font-size: 0.9rem; color: #666;">Misa: Domingos 09:00</p>
+                </div>
+                <div
+                    style="background: white; padding: 20px; border-radius: 8px; text-align: center; border: 1px solid #eee;">
+                    <h3 style="color: var(--cafe-primario);">Capilla Virgen del Carmen</h3>
+                    <p>Barrio Alto</p>
+                    <p style="font-size: 0.9rem; color: #666;">Misa: Sábados 18:00</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER INYECTADO -->
+    <div id="inyector-footer"></div>
+
+    <!-- SCRIPT (Importante: ruta relativa ../) -->
+    <!-- SCRIPTS (Orden Importante) -->
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
